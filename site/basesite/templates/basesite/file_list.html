@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %}All Files{% endblock title %}
+
+{% block content %}
+
+<table width="100%">
+	<tr>
+		<th width="100%">Title</th>
+		<th />
+		<th />
+		<th />
+	</tr>
+	{% for file in file_list %}
+	<tr>
+		<td>{{ file.title }}</td>
+		<td><a href="{% url 'file-download' file.slug %}">View</a></td>
+		<td><a href="{% url 'admin:basesite_file_change' file.id %}">Edit</a></td>
+	</tr>
+	{% endfor %}
+</table>
+
+<p><a href="{% url 'file-upload' %}">Add</a></p>
+
+{% endblock content %}

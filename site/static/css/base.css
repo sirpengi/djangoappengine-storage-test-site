@@ -1,0 +1,13 @@
+html, body {
+}
+
+.postlist .row {
+	padding-bottom: 20px;
+}
+
+.postlist h2 {
+	font-size: 1.2em;
+}
+
+@media (min-width: 700px) {
+}
