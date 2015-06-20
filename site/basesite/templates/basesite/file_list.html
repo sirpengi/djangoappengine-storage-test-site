@@ -14,7 +14,8 @@
 	{% for file in file_list %}
 	<tr>
 		<td>{{ file.title }}</td>
-		<td><a href="{% url 'file-download' file.slug %}">View</a></td>
+		<td><a href="{% url 'file-info' file.slug %}">Info</a></td>
+		<td><a href="{{ file.file.url }}">View</a></td>
 		<td><a href="{% url 'admin:basesite_file_change' file.id %}">Edit</a></td>
 	</tr>
 	{% endfor %}

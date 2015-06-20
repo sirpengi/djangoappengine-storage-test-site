@@ -48,8 +48,14 @@ class FileUpload(edit.View):
 		return HttpResponseRedirect(self.view_url)
 
 
-class FileDownload(View):
+class FileInfo(View):
+
+	template_name = 'basesite/file_info.html'
 
 	def get(self, request, slug):
 		file = get_object_or_404(File, slug=slug)
-		return serve_file(request, file.file)
+		gs_key = file.file.name.split('/', 3)[3]
+
+		return render(request, self.template_name,
+			{'file': file, 'gs_key': gs_key}
+			)

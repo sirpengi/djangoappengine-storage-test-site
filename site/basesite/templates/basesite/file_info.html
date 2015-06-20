@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block title %}File Info{% endblock title %}
+
+{% block content %}
+
+<h1>File: {{ file.title }}</h1>
+
+<dl>
+	<dt>slug</dt>
+	<dd>{{ file.slug }}</dd>
+	<dt>id</dt>
+	<dd>{{ file.id }}</dd>
+	<dt>.file</dt>
+	<dd>{{ file.file }}</dd>
+	<dt>.file.name</dt>
+	<dd>{{ file.file.name }}</dd>
+	<dt>.file.url</dt>
+	<dd>{{ file.file.url }}</dd>
+	<dt>gs key</dt>
+	<dd>{{ gs_key }}</dd>
+</dl>
+
+{% endblock content %}
