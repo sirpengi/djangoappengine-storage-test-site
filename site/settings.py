@@ -59,3 +59,8 @@ STATIC_URL = '/static/'
 TEMPLATE_DIRS = (os.path.join(os.path.dirname(__file__), 'templates'),)
 
 ROOT_URLCONF = 'urls'
+
+DEFAULT_FILE_STORAGE = 'basesite.storage.GoogleCloudStorage'
+PREPARE_UPLOAD_BACKEND = 'basesite.storage.prepare_upload'
+
+GOOGLE_CLOUD_STORAGE_BUCKET = 'gcs-upload.appspot.com'
