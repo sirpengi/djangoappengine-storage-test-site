@@ -1,0 +1,12 @@
+diff --git a/djangoappengine/storage.py b/djangoappengine/storage.py
+index d5f1014..d2d4424 100644
+--- a/djangoappengine/storage.py
++++ b/djangoappengine/storage.py
+@@ -290,6 +290,7 @@ class AppEngineFileUploadHandler(FileUploadHandler):
+             'content_type': content_type,
+             'size': int(size),
+             'charset': self.charset,
++            'gs_object_name': gs_object_name,
+         }
+ 
+         return AppEngineUploadedFile(**kwargs)
