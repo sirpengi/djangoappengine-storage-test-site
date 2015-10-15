@@ -2,6 +2,7 @@ Django==1.5.12
 django-dbindexer==1.6.1
 django-filetransfers==0.1.0
 django-templates-macros==0.1
-djangoappengine==1.7.0
-djangotoolbox==1.6.2
+djangoappengine==1.7.1
+djangotoolbox==1.8.0
+GoogleAppEngineCloudStorageClient==1.9.22.1
 wsgiref==0.1.2
